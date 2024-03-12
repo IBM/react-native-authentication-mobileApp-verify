@@ -7,8 +7,8 @@ const getToken = async refreshToken => {
   const body: any = {
     grant_type: 'refresh_token',
     refresh_token: refreshToken,
-    client_id: '70c7f342-df45-48de-a2fa-efb897f6892c',
-    client_secret: '5Q1CAx0sjr',
+    client_id: Config.client_id,
+    client_secret: Config.client_secret,
   };
   try {
     const response = await axios.post(`${baseUrl}/oauth2/token`, body, {
